@@ -15,6 +15,28 @@ void desplegarLista();
 
 int main()
 {
+    int menu = 0;
+    do
+    {
+        cout<<"\n|-------------------------------------|"
+        cout<<"\n|      LISTA CIRCULAR SIMPLES         |"
+        cout<<"\n|-------------------------------------|"
+        cout<<"\n|    1.Insertar   |  4. Eliminar      |"
+        cout<<"\n|    1.Buscar     |  4. Eliminar      |"
+        cout<<"\n|    1.insertar   |  4. Eliminar      |"
+        cout<<"\n|    1.insertar   |  4. Eliminar      |"
+        cout<<"\n|                              "
+        cout<<"\n|"
+
+    } while (/* condition */);
+    
+    insertarNodo();
+    insertarNodo();
+    insertarNodo();
+    insertarNodo();
+    insertarNodo();
+    cout<<"Lista circular desplegada";
+    desplegarLista();
     return 0;
 }
 
@@ -42,7 +64,7 @@ void desplegarLista(){
     nodo* actual= new nodo();
     actual = primero;
 
-    if (primero=NULL)
+    if (primero!=NULL)
     {
         do
         {
@@ -53,5 +75,4 @@ void desplegarLista(){
     } else{
         cout<<"\n La lista se encuentra vacia"<<endl;
     }
-
 }
