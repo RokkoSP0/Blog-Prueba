@@ -2,6 +2,18 @@ body{
     color: rgb(23, 21, 17);
     text-align: left;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+#cabecera{
+    background-color: blue;
+    box-shadow: 0px 5px 30px 0px rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5rem;
 }
 
 #container{
