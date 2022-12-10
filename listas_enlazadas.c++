@@ -18,17 +18,41 @@ int main()
     int menu = 0;
     do
     {
-        cout<<"\n|-------------------------------------|"
-        cout<<"\n|      LISTA CIRCULAR SIMPLES         |"
-        cout<<"\n|-------------------------------------|"
-        cout<<"\n|    1.Insertar   |  4. Eliminar      |"
-        cout<<"\n|    1.Buscar     |  4. Eliminar      |"
-        cout<<"\n|    1.insertar   |  4. Eliminar      |"
-        cout<<"\n|    1.insertar   |  4. Eliminar      |"
-        cout<<"\n|                              "
-        cout<<"\n|"
+        cout<<"\n|-------------------------------------|";
+        cout<<"\n|      LISTA CIRCULAR SIMPLES         |";
+        cout<<"\n|-------------------------------------|";
+        cout<<"\n|   1. Insertar   |  4. Eliminar      |";
+        cout<<"\n|   2. Buscar     |  5. Desplegar     |";
+        cout<<"\n|   3. Modificar  |  6. Salir         |";
+        cout<<"\n|-------------------------------------|";
+        cout<<"\n\n Elija una opcion:_";
+        cin>>menu;
 
-    } while (/* condition */);
+        switch (menu)
+        {
+        case 1:
+            cout<<"INSERTE UN NODO EN LA LISTA";
+            break;
+        case 2:
+            cout<<"BUSCAR UN NODO EN LA LISTA";
+            break;
+        case 3:
+            cout<<"MODIFICAR UN NODO EN LA LISTA";
+            break;
+        case 4:
+            cout<<"ELIMINAR UN NODO EN LA LISTA";
+            break;
+        case 5:
+            cout<<"MOSTRAR LOS ELEMENTOS DE LA LISTA";
+            break;
+        case 6:
+            cout<<"Programa finalizado.....";
+            break;
+        default:
+            cout<<"Opcion no valida"<<endl;
+            break;
+        }
+    } while (menu!=6);
     
     insertarNodo();
     insertarNodo();
