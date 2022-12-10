@@ -47,7 +47,8 @@ int main()
                 modificarNodo();
                 break;
             case 4:
-                cout<<"ELIMINAR UN NODO EN LA LISTA";
+                cout<<"ELIMINAR UN NODO EN LA LISTA"<<endl;
+                eliminarNodo();
                 break;
             case 5:
                 cout<<"MOSTRAR LOS ELEMENTOS DE LA LISTA"<<endl;
@@ -105,7 +106,7 @@ void buscarNodo(){
             }
             actual = actual -> siguiente;
         } while (actual!=primero && encontrado!=true);
-        else (encontrado==false)
+        if (encontrado == false)
         {
             cout<<"\n Nodo no encontrado";
         }    
@@ -137,7 +138,7 @@ void modificarNodo(){
             }
             actual = actual -> siguiente;
         } while (actual!=primero && encontrado!=true);
-        if (encontrado)
+        if (encontrado==false)
         {
             cout<<"\n Nodo no encontrado";
         }    
@@ -147,6 +148,49 @@ void modificarNodo(){
 }
 
 
+void eliminarNodo(){
+    nodo* actual= new nodo();
+    actual = primero;
+    nodo* anterior =new nodo();
+    anterior = NULL;
+    bool encontrado = false;
+    int nodoBuscado=0;
+    
+    cout<<"\n Ingrese el dato del nodo a buscar para eliminar: ";
+    cin>>nodoBuscado;
+
+    if (primero!=NULL)
+    {
+        do
+        {
+            if (actual->dato == nodoBuscado)
+            {
+                cout<<"\n El nodo con el dato [ "<<nodoBuscado<<" ] encontrado "<<endl;
+                if (actual==primero)
+                {
+                    primero= primero->siguiente;
+                    ultimo->siguiente= primero;
+                } else if (actual==ultimo){
+                    anterior->siguiente = primero;
+                    ultimo=anterior;
+                } else{
+                    anterior->siguiente = actual->siguiente;
+                }
+
+                cout<<"\n Nodo Eliminado"<<endl;
+                encontrado = true;
+            }
+            anterior = actual;
+            actual = actual -> siguiente;
+        } while (actual!=primero && encontrado!=true);
+        if (encontrado==false)
+        {
+            cout<<"\n Nodo no encontrado";
+        }    
+    } else{
+        cout<<"\n La lista se encuentra vacia"<<endl;
+    }
+}
 void desplegarLista(){
     nodo* actual= new nodo();
     actual = primero;
