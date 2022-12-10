@@ -11,8 +11,11 @@ struct nodo
 } *primero, *ultimo;
 
 void insertarNodo();
-void desplegarLista();
 void buscarNodo();
+void modificarNodo();
+void eliminarNodo();
+
+void desplegarLista();
 
 int main()
 {
@@ -40,7 +43,8 @@ int main()
                 buscarNodo();
                 break;
             case 3:
-                cout<<"MODIFICAR UN NODO EN LA LISTA";
+                cout<<"MODIFICAR UN NODO EN LA LISTA"<<endl;
+                modificarNodo();
                 break;
             case 4:
                 cout<<"ELIMINAR UN NODO EN LA LISTA";
@@ -101,17 +105,46 @@ void buscarNodo(){
             }
             actual = actual -> siguiente;
         } while (actual!=primero && encontrado!=true);
-        if (encontrado)
+        else (encontrado==false)
         {
             cout<<"\n Nodo no encontrado";
-        }
-        
-        
+        }    
     } else{
         cout<<"\n La lista se encuentra vacia"<<endl;
     }
 }
 
+void modificarNodo(){
+    nodo* actual= new nodo();
+    actual = primero;
+    bool encontrado = false;
+    int nodoBuscado=0;
+
+    cout<<"\n Ingrese el dato del nodo a Modificar ";
+    cin>>nodoBuscado;
+
+    if (primero!=NULL)
+    {
+        do
+        {
+            if (actual->dato == nodoBuscado)
+            {
+                cout<<"\n El nodo con el dato [ "<<nodoBuscado<<" ] encontrado "<<endl;
+                cout<<"\n Ingrese el nuevo dato para modificar el nodo: ";
+                cin>>actual->dato;
+                cout<<"\n El nodo ha sido modificado";
+                encontrado = true;
+            }
+            actual = actual -> siguiente;
+        } while (actual!=primero && encontrado!=true);
+        if (encontrado)
+        {
+            cout<<"\n Nodo no encontrado";
+        }    
+    }else{
+        cout<<"\n La lista se encuentra vacia"<<endl;
+    }
+}
 
 
 void desplegarLista(){
