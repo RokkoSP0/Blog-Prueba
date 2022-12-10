@@ -12,6 +12,7 @@ struct nodo
 
 void insertarNodo();
 void desplegarLista();
+void buscarNodo();
 
 int main()
 {
@@ -30,37 +31,32 @@ int main()
 
         switch (menu)
         {
-        case 1:
-            cout<<"INSERTE UN NODO EN LA LISTA";
-            break;
-        case 2:
-            cout<<"BUSCAR UN NODO EN LA LISTA";
-            break;
-        case 3:
-            cout<<"MODIFICAR UN NODO EN LA LISTA";
-            break;
-        case 4:
-            cout<<"ELIMINAR UN NODO EN LA LISTA";
-            break;
-        case 5:
-            cout<<"MOSTRAR LOS ELEMENTOS DE LA LISTA";
-            break;
-        case 6:
-            cout<<"Programa finalizado.....";
-            break;
-        default:
-            cout<<"Opcion no valida"<<endl;
-            break;
+            case 1:
+                cout<<"INSERTE UN NODO EN LA LISTA"<<endl;
+                insertarNodo();
+                break;
+            case 2:
+                cout<<"BUSCAR UN NODO EN LA LISTA"<<endl;
+                buscarNodo();
+                break;
+            case 3:
+                cout<<"MODIFICAR UN NODO EN LA LISTA";
+                break;
+            case 4:
+                cout<<"ELIMINAR UN NODO EN LA LISTA";
+                break;
+            case 5:
+                cout<<"MOSTRAR LOS ELEMENTOS DE LA LISTA"<<endl;
+                desplegarLista();
+                break;
+            case 6:
+                cout<<"Programa finalizado.....";
+                break;
+            default:
+                cout<<"Opcion no valida"<<endl;
+                break;
         }
     } while (menu!=6);
-    
-    insertarNodo();
-    insertarNodo();
-    insertarNodo();
-    insertarNodo();
-    insertarNodo();
-    cout<<"Lista circular desplegada";
-    desplegarLista();
     return 0;
 }
 
@@ -83,6 +79,40 @@ void insertarNodo(){
         cout<<"\nNodo ingresado"<<endl;
     }   
 }
+
+
+void buscarNodo(){
+    nodo* actual= new nodo();
+    actual = primero;
+    bool encontrado = false;
+    int nodoBuscado=0;
+    
+    cout<<"\n Ingrese el dato del nodo a buscar: ";
+    cin>>nodoBuscado;
+
+    if (primero!=NULL)
+    {
+        do
+        {
+            if (actual->dato == nodoBuscado)
+            {
+                cout<<"\n El nodo con el dato [ "<<nodoBuscado<<" ] encontrado "<<endl;
+                encontrado = true;
+            }
+            actual = actual -> siguiente;
+        } while (actual!=primero && encontrado!=true);
+        if (encontrado)
+        {
+            cout<<"\n Nodo no encontrado";
+        }
+        
+        
+    } else{
+        cout<<"\n La lista se encuentra vacia"<<endl;
+    }
+}
+
+
 
 void desplegarLista(){
     nodo* actual= new nodo();
