@@ -41,3 +41,8 @@ body{
     background-color: white;
     padding: 1em;
 }
+#fin{
+    text-align: center;
+    background-image: radial-gradient(rgb(158, 158, 199), yellow)
+    
+}
