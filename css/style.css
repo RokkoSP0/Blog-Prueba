@@ -1,4 +1,5 @@
 body{
+    background-image: radial-gradient(rgb(71, 200, 94),rgb(103, 103, 189),green);
     color: rgb(23, 21, 17);
     text-align: left;
     font-family: monospace;
@@ -7,13 +8,20 @@ body{
     padding: 0;
 }
 
-#cabecera{
+#cabecera {
     background-color: red;
     box-shadow: 0px 5px 30px 0px rgb(0, 0, 0);
     color: white;
     font-weight: bold;
     margin: 0;
-    padding: 0.5rem;
+    padding: 0.5em 0 02em 1rem;
+}
+
+#cabecera #logo{
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+
 }
 
 #container{
@@ -27,4 +35,9 @@ body{
 
 #container h1{
     font-size: 20px;
+}
+
+#post{
+    background-color: white;
+    padding: 1em;
 }
