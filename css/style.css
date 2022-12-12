@@ -30,6 +30,6 @@ body{
 }
 #fin{
     text-align: center;
-    background-image: radial-gradient(blue, yellow)
+    background-image: radial-gradient(rgb(158, 158, 199), yellow)
     
 }
