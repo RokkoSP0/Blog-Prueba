@@ -4,3 +4,14 @@
 
 * Puntos a tratar 
 * Tan pro
+
+* s
+* s
+* s
+* s
+* s
+* s
+* s
+* s
+* s
+* s
