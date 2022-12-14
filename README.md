@@ -15,32 +15,3 @@
 * s
 * s
 * s
-
-* ejemlos good
-* tam pro y gasu
-
-* s
-* s
-* s
-* s
-* s
-* s
-* s
-* s
-* s
-* s
-* s
-
-* ejemlos good
-* tam pro y gasu
-
-* s
-* s
-* s
-* s
-* s
-* s
-* s
-* s
-* s
-* s
